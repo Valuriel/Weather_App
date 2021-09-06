@@ -1,3 +1,5 @@
+//API handling
+
 const key = '6pCvWaAjtN7mi37qXGo9TRD2GMralUS5';
 
 // Get Weather information
@@ -23,11 +25,4 @@ const getCity = async (city) => {
     const data = await response.json();
 
     return data[0];
-
 };
-
-getCity('Berlin').then(data => {
-    return getWeather(data.Key);
-}).then(data => {
-    console.log(data);
-}).catch(err => console.log(err));
